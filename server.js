@@ -11,7 +11,7 @@ const exercisesRouter = require("./routes/exercises");
 const usersRouter = require("./routes/users");
 
 // connection to the dbase
-mongoose.connect(process.env.MONGO_URL_2, {
+mongoose.connect(process.env.MONGO_URL, {
   useNewUrlParser: true,
   useUnifiedTopology: true,
 });
