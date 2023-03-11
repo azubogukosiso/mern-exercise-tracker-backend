@@ -21,7 +21,9 @@ db.once("open", function () {
   app.listen(process.env.API_PORT);
 });
 
-app.use(cors());
+app.use(cors({
+  origin: ["http://localhost:3000", "https://exercise-tracker-app.onrender.com"],
+}));
 app.use(express.json());
 
 app.use("/exercises", exercisesRouter);
