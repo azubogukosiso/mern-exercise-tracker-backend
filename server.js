@@ -28,5 +28,3 @@ app.use(express.json());
 
 app.use("/exercises", exercisesRouter);
 app.use("/users", usersRouter);
-
-module.exports = app;
