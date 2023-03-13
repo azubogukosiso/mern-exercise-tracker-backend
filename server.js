@@ -6,6 +6,8 @@ const app = express();
 const dotenv = require('dotenv');
 dotenv.config();
 
+const PORT = process.env.PORT || 5000;
+
 // route imports
 const exercisesRouter = require("./routes/exercises");
 const usersRouter = require("./routes/users");
@@ -18,7 +20,7 @@ mongoose.connect(process.env.MONGO_URL, {
 const db = mongoose.connection;
 db.on("error", console.error.bind(console, "connection error"));
 db.once("open", function () {
-  app.listen(process.env.API_PORT);
+  app.listen(PORT);
 });
 
 app.use(cors({
