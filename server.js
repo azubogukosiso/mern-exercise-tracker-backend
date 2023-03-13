@@ -22,7 +22,7 @@ db.once("open", function () {
 });
 
 app.use(cors({
-  origin: ["http://localhost:3000", "https://exercise-tracker-app.onrender.com"],
+  origin: ["http://localhost:3000", "https://exercise-tracker-app-oxji.onrender.com"],
 }));
 app.use(express.json());
 
